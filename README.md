@@ -1,11 +1,13 @@
 
 [![Arduino CI](https://github.com/RobTillaart/MINMAX/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![Arduino-lint](https://github.com/RobTillaart/MINMAX/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/MINMAX/actions/workflows/arduino-lint.yml)
+[![JSON check](https://github.com/RobTillaart/MINMAX/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/MINMAX/actions/workflows/jsoncheck.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/MINMAX/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/RobTillaart/MINMAX.svg?maxAge=3600)](https://github.com/RobTillaart/MINMAX/releases)
 
 # MINMAX
 
-Library for finding peaks ( minimum and maximum) in signal.
+Library for finding peaks (minimum and maximum) in signal.
 
 ## Description
 
@@ -15,13 +17,16 @@ The MINMAX
 ## Interface
 
 - **MINMAX** Constructor
-- **uint8_t add(float f)** add next value. Returns status (flags), see table below.
+- **uint8_t add(float f)** add next value. Returns status (bit flags), see table below.
 - **void reset()** resets the minimum and maximum 
-- **void autoreset(uint32_t cnt)**
-- **float minimum()**
-- **float maximum()**
-- **uint32_t count()**
+- **void autoReset(uint32_t cnt)** sets an auto-reset moment after cnt calls to **add()**.  
+There will be at least one value processed.
+- **float minimum()** returns last minimum. Can be higher than previous call due to **reset()** or **autoReset()**. If no call to **add()** is made it will return 0.
+- **float maximum()** returns last maximum. Can be lower than previous call due to **reset()** or **autoReset()**.  If no call to **add()** is made it will return 0.
+- **uint32_t count()** returns nr of **add()** calls since last (auto)reset.
 
+
+Return values of **add()**
 
 | flag | description     |
 |:----:|:----------------|
