@@ -40,7 +40,7 @@ unittest_teardown()
 
 unittest(test_add)
 {
-  fprintf(stderr, "VERSION: %s\n", MINMAX_LIB_VERSION);
+  fprintf(stderr, "VERSION: %s\n", (char *) MINMAX_LIB_VERSION);
 
   MINMAX mm;
   
@@ -56,7 +56,7 @@ unittest(test_add)
 
 unittest(test_reset)
 {
-  fprintf(stderr, "VERSION: %s\n", MINMAX_LIB_VERSION);
+  fprintf(stderr, "VERSION: %s\n", (char *) MINMAX_LIB_VERSION);
 
   MINMAX mm;
   
@@ -64,7 +64,7 @@ unittest(test_reset)
   {
     mm.add(i);
   }
-  mm.reset()
+  mm.reset();
   assertEqual(0, mm.minimum());
   assertEqual(0, mm.maximum());
   assertEqual(0, mm.count());
@@ -73,7 +73,7 @@ unittest(test_reset)
 
 unittest(test_autoReset)
 {
-  fprintf(stderr, "VERSION: %s\n", MINMAX_LIB_VERSION);
+  fprintf(stderr, "VERSION: %s\n", (char *) MINMAX_LIB_VERSION);
 
   MINMAX mm;
 
