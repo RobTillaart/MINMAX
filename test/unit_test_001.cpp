@@ -67,7 +67,7 @@ unittest(test_reset)
   mm.reset()
   assertEqual(0, mm.minimum());
   assertEqual(0, mm.maximum());
-  asssetEqual(0, mm.count());
+  assertEqual(0, mm.count());
 }
 
 
@@ -85,7 +85,7 @@ unittest(test_autoReset)
   }
   assertEqual(0, mm.minimum());
   assertEqual(14, mm.maximum());
-  asssetEqual(5, mm.count());
+  assertEqual(5, mm.count());
 }
 
 
