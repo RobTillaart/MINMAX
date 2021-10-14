@@ -28,7 +28,7 @@ void loop()
 {
   int r = random(10001) - 5000;
 
-  if (mm.add(r) != 0x00)  // changed minimum or maximum
+  if (mm.add(r) != 0x00)  // changed minimum or maximum or reset
   {
     Serial.print(mm.count());
     Serial.print("\t");
@@ -38,7 +38,6 @@ void loop()
     Serial.print("\n");
   }
 }
-
 
 
 // -- END OF FILE --

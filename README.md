@@ -11,7 +11,11 @@ Library for finding peaks (minimum and maximum) in signal.
 
 ## Description
 
-The MINMAX 
+The MINMAX library is a simple peak finder in a stream of floats. 
+
+It indicates if after adding a number the minimum and/or the maximum value has been changed by means of a bit flag that is returned. The library can reset the min and max to start again. 
+
+The library has also the option to auto-reset after a predefined number of **add()** calls.
 
 
 ## Interface
@@ -46,4 +50,5 @@ The examples show the basic working of the functions.
 - update documentation
 - define FLAGS
 - add call back functions?
+- thresholds, windowing + triggers
 
