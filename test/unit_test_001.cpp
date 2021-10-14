@@ -50,7 +50,7 @@ unittest(test_add)
   }
   assertEqual(0, mm.minimum());
   assertEqual(999, mm.maximum());
-  asssetEqual(1000, mm.count());
+  assertEqual(1000, mm.count());
 }
 
 
