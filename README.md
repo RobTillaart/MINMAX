@@ -42,12 +42,13 @@ If no call to **add()** is made it will return 0.
 
 Return flags of **add()** - is a bitmask
 
-| flag | description     |
-|:----:|:----------------|
-| 0x00 | no change       |
-| 0x01 | minimum changed |
-| 0x02 | maximum changed |
-| 0x80 | reset done      |
+| flag               | value | description     |
+|:-------------------|:-----:|:----------------|
+| MINMAX_NO_CHANGE   | 0x00  | no change       |
+| MINMAX_MIN_CHANGED | 0x01  | minimum changed |
+| MINMAX_MAX_CHANGED | 0x02  | maximum changed |
+| MINMAX_RESET_DONE  | 0x80  | reset done      |
+
 
 
 ## Obsolete

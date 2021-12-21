@@ -36,7 +36,7 @@ public:
   }
 
 
-  uint8_t add(float value)
+  uint8_t add(const float value)
   {
     uint8_t rv = MINMAX_NO_CHANGE;
     if ((_resetCount != 0) && (_resetCount == _count))
