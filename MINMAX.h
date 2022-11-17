@@ -64,7 +64,7 @@ public:
     _maximum = 0;
     _count   = 0;
     _lastMin = 0;
-    _lasrMax = 0;
+    _lastMax = 0;
   }
 
 
@@ -109,7 +109,7 @@ private:
   void     (* _callback)(void);
 
   uint32_t _lastMin;
-  uint32_t _lasrMax;
+  uint32_t _lastMax;
 
 };
 
