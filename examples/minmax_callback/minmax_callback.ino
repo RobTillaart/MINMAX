@@ -1,9 +1,7 @@
 //
 //    FILE: minmax_new.ino
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.1.0
 // PURPOSE: demo
-//    DATE: 2021-10-14
 //     URL: https://github.com/RobTillaart/minmax
 
 
@@ -31,6 +29,7 @@ void loop()
   mm.add(r);
 }
 
+
 void display()
 {
   Serial.print(mm.count());
@@ -41,4 +40,5 @@ void display()
   Serial.print("\n");
 }
 
-// -- END OF FILE --
+
+//  -- END OF FILE --
