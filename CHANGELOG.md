@@ -8,11 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.2.0] - 2022-12-07
 - fix #6 split in .cpp and .h
+- remove obsolete autoReset()
 - update readme.md
 - update keywords.txt
 - update unit test
 - update examples
-- remove obsolete autoReset()
 
 
 ----
