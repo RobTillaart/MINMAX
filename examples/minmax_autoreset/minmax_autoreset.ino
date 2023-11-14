@@ -20,8 +20,6 @@ void setup()
   Serial.print("MINMAX_LIB_VERSION: ");
   Serial.println(MINMAX_LIB_VERSION);
   Serial.println();
-  
-  MINMAX_LIB_VERSION
 
   mm.setAutoResetCount(10000);
 }
