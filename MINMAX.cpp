@@ -29,6 +29,7 @@ uint8_t MINMAX::add(const float value)
     reset();
     rv |= MINMAX_RESET_DONE;
   }
+  //  new run and range not adjusted by setResetDefaults()
   if ((_count == 0) && (_minimum == 0) && (_maximum == 0))
   {
     _minimum = _maximum = value;
