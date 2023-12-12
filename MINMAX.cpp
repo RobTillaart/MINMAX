@@ -61,6 +61,14 @@ void MINMAX::reset()
 }
 
 
+void MINMAX::setResetDefaults(float minimum, float maximum)
+{
+  _minimumDefault = minimum;
+  _maximumDefault = maximum;
+}
+
+
+
 void MINMAX::addCallBack( void (* func)(void) )
 {
   _callback = func;
