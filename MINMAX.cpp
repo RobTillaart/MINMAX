@@ -29,13 +29,19 @@ uint8_t MINMAX::add(const float value)
     reset();
     rv |= MINMAX_RESET_DONE;
   }
-  if ((value < _minimum) || (_count == 0))
+  if ((_count == 0) && (_minimum == 0) && (_maximum == 0))
+  {
+    _minimum = _maximum = value;
+    _lastMin = _lastMax = millis();
+    rv |= MINMAX_MIN_CHANGED | MINMAX_MAX_CHANGED;
+  }
+  if (value < _minimum)
   {
     _minimum = value;
     _lastMin = millis();
     rv |= MINMAX_MIN_CHANGED;
   }
-  if ((value > _maximum) || (_count == 0))
+  if (value > _maximum)
   {
     _maximum = value;
     _lastMax = millis();
